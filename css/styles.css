@@ -59,6 +59,7 @@ section#introduction {
 
 footer {
     display: flex;
+    align-items: center;
     padding-bottom: var(--s2);
 }
 
