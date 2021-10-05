@@ -1,116 +1,118 @@
-
 /********** Fonts **********/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap");
 
 body {
-    background-color: var(--background-colour);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+  background-color: var(--background-colour);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 
 /********** Page Variables **********/
 html {
-      /*** modular scale ***/
-    --factor: 1.5;
-    --s0: 1rem;
-    --s1: calc(var(--s0) * var(--factor));
-    --s2: calc(var(--s1) * var(--factor));
-    --s3: calc(var(--s2) * var(--factor));
-    --s4: calc(var(--s3) * var(--factor));
-    --s5: calc(var(--s4) * var(--factor));
-    --s-1: calc(var(--s0) / var(--factor));
-    --s-2: calc(var(--s-1) / var(--factor));
-    --s-3: calc(var(--s-2) / var(--factor));
-    --s-4: calc(var(--s-3) / var(--factor));
-    --s-5: calc(var(--s-4) / var(--factor));
+  /*** modular scale ***/
+  --factor: 1.5;
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--factor));
+  --s2: calc(var(--s1) * var(--factor));
+  --s3: calc(var(--s2) * var(--factor));
+  --s4: calc(var(--s3) * var(--factor));
+  --s5: calc(var(--s4) * var(--factor));
+  --s-1: calc(var(--s0) / var(--factor));
+  --s-2: calc(var(--s-1) / var(--factor));
+  --s-3: calc(var(--s-2) / var(--factor));
+  --s-4: calc(var(--s-3) / var(--factor));
+  --s-5: calc(var(--s-4) / var(--factor));
 
-    /*** colours ***/
-    --background-colour: rgba(20,20,20,1);
-    --main-font-colour: rgba(255,255,255,1);
-    --hover-font-colour: rgb(0, 191, 255, 1);
+  /*** colours ***/
+  --background-colour: rgba(20, 20, 20, 1);
+  --main-font-colour: rgba(255, 255, 255, 1);
+  --hover-font-colour: rgb(0, 191, 255, 1);
 }
 
 /********** Page Layout **********/
-html, body {
-    margin: 0px;
+html,
+body {
+  margin: 0px;
 }
 
 body {
-    height: 100vh;
-    padding-left: var(--s2);
+  height: 100vh;
+  padding-left: var(--s2);
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-  
+
 main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
-  
+
 section#introduction {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    padding-bottom: var(--s2);
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--s2);
 }
 
 footer p {
-    padding-right: var(--s0)
+  padding-right: var(--s0);
 }
 
-@media (max-width: 480px){
-    footer { 
-        display : none; 
-        visibility : hidden; 
-    }
+@media (max-width: 480px) {
+  footer {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 h1 {
-    font-weight: 400;
-    font-size: var(--s5);
-    margin-bottom: var(--s-5);
+  color: var(--main-font-colour);
+  font-weight: 400;
+  font-size: var(--s5);
+  margin-bottom: var(--s-5);
 }
-  
+
 h2 {
-    font-weight: 100;
+  font-weight: 100;
+  font-size: var(--s4);
+  margin: 0;
+}
+
+@media (max-width: 1300px) {
+  h1 {
     font-size: var(--s4);
-    margin: 0;
+  }
+
+  h2 {
+    font-size: var(--s3);
+  }
 }
 
-@media (max-width: 1300px){
-    h1 {
-        font-size: var(--s4);
-    }
+@media (max-width: 760px) {
+  h1 {
+    font-size: var(--s3);
+  }
 
-    h2 {
-        font-size: var(--s3);
-    }
+  h2 {
+    font-size: var(--s2);
+  }
 }
 
-@media (max-width: 760px){
-    h1 {
-        font-size: var(--s3);
-    }
-
-    h2 {
-        font-size: var(--s2);
-    }
-}
-  
-a, p {
-    color: var(--main-font-colour);
-    text-decoration: none;
+a,
+p {
+  color: var(--main-font-colour);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--hover-font-colour);
+  color: var(--hover-font-colour);
 }
